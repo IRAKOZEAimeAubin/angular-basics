@@ -1,1 +1,10 @@
-<ta-dashboard></ta-dashboard>
+<nav class="max-w-[100%] flex p-4">
+    <ul class="mx-auto">
+        <li>
+            <a [routerLink]="['/addTodo']" routerLinkActive="active" class="font-medium tracking-wide rounded p-2 hover:font-bold hover:tracking-wider hover:bg-slate-300">Add Todo</a>
+        </li>
+
+    </ul>
+</nav>
+
+<router-outlet></router-outlet>

@@ -4,6 +4,7 @@ export interface Todo {
   title: string;
   description: string;
   tags: string[];
+  status: string;
   createdAt: string;
   updatedAt: string;
 }
