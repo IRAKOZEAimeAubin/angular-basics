@@ -11,6 +11,11 @@
                 <div class="w-full">
                   <label for="tags" class="block mb-2 text-sm font-medium text-gray-900">Tags</label>
                   <input type="text" name="tags" id="tags" class="bg-slate-50 text-gray-900 text-sm rounded-lg block w-full p-2.5 outline-none" placeholder="Tags" required="">
+                  <div class="flex gap-1">
+                    <div *ngFor="let tag of selectedTodo?.tags" class="">
+                      <span class="text-xs font-medium bg-slate-300 rounded py-[2px] px-1">{{tag}}</span>
+                    </div>
+                  </div>
                 </div>
                 <div class="w-full">
                   <label for="status" class="block mb-2 text-sm font-medium text-gray-900">Status</label>
@@ -25,6 +30,12 @@
                   <textarea id="description" name="description" rows="8" class="block p-2.5 w-full text-sm text-gray-900 bg-slate-50 rounded-lg outline-none" placeholder="Todo..." [(ngModel)]="selectedTodo && selectedTodo.description"></textarea>
                 </div>
             </div>
+            <button
+          type="submit"
+          class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-semibold text-center text-white bg-sky-700 rounded-lg hover:ring-4 focus:ring-4"
+        >
+          Edit Todo
+        </button>
         </form>
        </div> 
     </section>
